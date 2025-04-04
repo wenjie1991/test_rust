@@ -1,0 +1,12 @@
+[package]
+name = 'test'
+version = '0.1.1'
+edition = '2021'
+
+[lib]
+crate-type = [ 'staticlib' ]
+name = 'test'
+
+[dependencies]
+extendr-api = '*'
+openssl = "0.10"
