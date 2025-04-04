@@ -3,7 +3,7 @@ use openssl::ssl::{SslConnector, SslMethod};
 
 #[extendr]
 fn check_ssl() -> i32{
-    //let _ = SslConnector::builder(SslMethod::tls()).unwrap();
+    let _ = SslConnector::builder(SslMethod::tls()).unwrap();
     1 + 1
 }
 

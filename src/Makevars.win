@@ -3,10 +3,10 @@ TARGET = $(subst 64,x86_64,$(subst 32,i686,$(WIN)))-pc-windows-gnu
 TARGET_DIR = ./rust/target
 LIBDIR = $(TARGET_DIR)/$(TARGET)/release
 STATLIB = $(LIBDIR)/libtest.a
-PKG_LIBS = -L$(LIBDIR) -ltest -lws2_32 -ladvapi32 -luserenv -lbcrypt -lntdll
+#PKG_LIBS = -L$(LIBDIR) -ltest -lws2_32 -ladvapi32 -luserenv -lbcrypt -lntdll
 #PKG_LIBS = -L$(LIBDIR) -ltest -lssl -lcrypto -lws2_32 -ladvapi32 -luserenv -lbcrypt -lntdll
 #PKG_LIBS = -L$(LIBDIR) -L"C:/msys64/mingw64/lib" -ltest -lcrypto -lssl -lws2_32 -ladvapi32 -luserenv -lbcrypt -lntdll
-#PKG_LIBS = -L$(LIBDIR) -lssl -lcrypto -lz -lws2_32 -lgdi32 -lcrypt32 -lR -lkernel32 -ladvapi32 -lntdll -luserenv -lws2_32 -ldbghelp
+PKG_LIBS = -L$(LIBDIR) -ltest -lssl -lcrypto -lz -lws2_32 -lgdi32 -lcrypt32 -lR -lkernel32 -ladvapi32 -lntdll -luserenv -lws2_32 -ldbghelp
 
 all: C_clean
 
